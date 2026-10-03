@@ -1,0 +1,6 @@
+{
+  "name": "brevity",
+  "description": "Removes from your llm the verbosity everyone hates.",
+  "version": "1.0.0",
+  "author": { "name": "Martin Ignacio Alonso" }
+}

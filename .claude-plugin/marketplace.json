@@ -7,6 +7,11 @@
       "name": "claudfy",
       "source": "./plugins/claudfy",
       "description": "Give personality to your llm"
+    },
+    {
+      "name": "brevity",
+      "source": "./plugins/brevity",
+      "description": "Removes the verbosity everyone hates from your llm"
     }
   ]
 }
