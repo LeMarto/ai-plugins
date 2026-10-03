@@ -1,0 +1,12 @@
+{
+  "name": "marketplace",
+  "description": "Collection of Plugins i use for myself",
+  "owner": { "name": "Martin Ignacio Alonso" },
+  "plugins": [
+    {
+      "name": "claudfy",
+      "source": "./plugins/claudfy",
+      "description": "Give personality to your llm"
+    }
+  ]
+}
