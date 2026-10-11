@@ -13,7 +13,7 @@ Reply in the user's language. Document and section names below are in Spanish be
 Use WebSearch and WebFetch for searching and reading web pages. The shell can reach www.cnv.gov.ar, aif2.cnv.gov.ar and blob.cnv.gov.ar; use it for the CNV listing (step 2) and documents (step 3). WebFetch of www.cnv.gov.ar failed with a DNS error in testing.
 
 ## 0. Considerations
-The tools are the `rueda` Python package, shipped as `rueda-0.1.0-py3-none-any.whl` in this skill's directory (`${CLAUDE_SKILL_DIR}`). Where a step says `rueda <command>`, run `uvx --from ${CLAUDE_SKILL_DIR}/rueda-0.1.0-py3-none-any.whl rueda <command>`. Run it from the scratchpad; the commands write `./docs/`, `./holidays/` and `./sec/` there. `uvx` installs the package's dependencies (requests, pypdf, olefile) on the first run. `rueda` without arguments lists the commands. For other Python, use `uv run --with <package>`.
+The tools are the `rueda` Python package, shipped as `rueda-0.1.1-py3-none-any.whl` in this skill's directory (`${CLAUDE_SKILL_DIR}`). Where a step says `rueda <command>`, run `uvx --from ${CLAUDE_SKILL_DIR}/rueda-0.1.1-py3-none-any.whl rueda <command>`. Run it from the scratchpad; the commands write `./docs/`, `./holidays/` and `./sec/` there. `uvx` installs the package's dependencies (requests, pypdf, olefile) on the first run. `rueda` without arguments lists the commands. For other Python, use `uv run --with <package>`.
 
 ## 1. Identify the bond
 

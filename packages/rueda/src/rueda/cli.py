@@ -1,4 +1,5 @@
 """Tools for Argentine market instruments.
+
 Usage: rueda <command> [args]
   identify          check a ticker, CUIT, ISIN or class number
   holidays          bank holidays, AR or US
@@ -9,8 +10,11 @@ Usage: rueda <command> [args]
   on terms-example  an example terms.json
   on schedule       payment schedule of an ON from terms.json
   on tir            yield, duration and parity from terms.json and a price
-`rueda <command> -h` prints the command's usage."""
-import importlib, sys
+`rueda <command> -h` prints the command's usage.
+"""
+
+import importlib
+import sys
 
 COMMANDS = {
     ("identify",): "rueda.identify:main",
@@ -25,13 +29,16 @@ COMMANDS = {
 }
 
 
-def main(argv=None):
+def main(argv: list[str] | None = None) -> None:
+    """Run the command named by the first one or two arguments."""
     args = sys.argv[1:] if argv is None else argv
     for n in (2, 1):
         target = COMMANDS.get(tuple(args[:n]))
         if target:
-            module, fn = target.split(":")  # imported here so a command loads only its own dependencies
-            return getattr(importlib.import_module(module), fn)(args[n:])
+            # imported here so a command loads only its own dependencies
+            module, fn = target.split(":")
+            getattr(importlib.import_module(module), fn)(args[n:])
+            return
     sys.exit(__doc__)
 
 

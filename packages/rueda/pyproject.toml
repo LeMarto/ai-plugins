@@ -1,6 +1,6 @@
 [project]
 name = "rueda"
-version = "0.1.0"
+version = "0.1.1"
 description = "Tools for Argentine market instruments: CNV filings, SEC 20-F filings, ON payment schedules and yields"
 readme = "README.md"
 authors = [
@@ -27,6 +27,7 @@ dev = [
     "pytest>=9.1.1",
     "rueda-build",
     "ruff>=0.17.0",
+    "types-olefile>=0.47.0.20260508",
 ]
 
 [tool.uv.workspace]
@@ -46,6 +47,7 @@ ignore = [
   "D203",    # conflicts with D211
   "D213",    # conflicts with D212
   "COM812",  # conflicts with ruff format
+  "CPY001",  # the licence is declared in pyproject.toml and LICENSE
 ]
 
 [tool.ruff.lint.per-file-ignores]
