@@ -1,0 +1,22 @@
+{
+  "_comment": "PLC5 (Pluspetrol S.A. Clase 5), verified October 2026. Every field is {value, source}. Required: issue_date, maturity, rate_type, rate (fixed) or base_rate + margin (floating), day_count (30/360, 30E/360, ACT/365, ACT/360, ACT/ACT), frequency_months, payment_dates or first_payment_date, amortization (pct of original face value, adding up to 100), business_day_rule (following, modified_following, preceding, none), business_day_calendars (AR, US). Optional: accrue_to_adjusted_date (default false: interest accrues to the scheduled date), interest_start_date, min_denomination, increment, last_payment_notice {date, interest_per_100, amortization_per_100, rate for floating}, call_schedule [{from, to (exclusive, optional), price_pct of outstanding principal}] for fixed-price call windows (make-whole periods are not modeled). Amortization tables rounded by the issuer may add up to 100 +/- 0.01; the last installment takes the remainder. Floating base_rate value: {name, rate, date}.",
+  "issuer": {"value": "Pluspetrol S.A.", "source": "Suplemento 10/11/2025"},
+  "cuit": {"value": "30-67822401-0", "source": "CNV company page"},
+  "class": {"value": "5", "source": "Suplemento 10/11/2025"},
+  "isin": {"value": "USP7924AAC29", "source": "broker instrument page; CUSIP P7924AAC2 in aviso de pago 12/05/2026"},
+  "currency": {"value": "USD", "source": "Suplemento 10/11/2025"},
+  "issue_date": {"value": "2025-11-18", "source": "Aviso de resultados 12/11/2025, item 5"},
+  "maturity": {"value": "2031-05-18", "source": "Aviso de resultados 12/11/2025, item 6"},
+  "rate_type": {"value": "fixed", "source": "Aviso de resultados 12/11/2025, item 3"},
+  "rate": {"value": 8.125, "source": "Aviso de resultados 12/11/2025, item 3"},
+  "day_count": {"value": "30/360", "source": "Suplemento 10/11/2025, Descripción de la Oferta, p. 112"},
+  "frequency_months": {"value": 6, "source": "Suplemento 10/11/2025, Fechas de Pago de Intereses"},
+  "first_payment_date": {"value": "2026-05-18", "source": "Aviso de resultados 12/11/2025, item 8"},
+  "amortization": {"value": [{"date": "2031-05-18", "pct": 100}], "source": "Aviso de resultados 12/11/2025, item 7"},
+  "business_day_rule": {"value": "following", "source": "Suplemento 10/11/2025, p. 112"},
+  "accrue_to_adjusted_date": {"value": false, "source": "Suplemento 10/11/2025, p. 112: no interest accrues after the due date"},
+  "business_day_calendars": {"value": ["AR", "US"], "source": "Suplemento 10/11/2025, definition of Día Hábil (Buenos Aires and New York)"},
+  "min_denomination": {"value": 1000, "source": "Suplemento 10/11/2025"},
+  "increment": {"value": 1000, "source": "Suplemento 10/11/2025"},
+  "last_payment_notice": {"value": {"date": "2026-05-18", "interest_per_100": 4.0625, "amortization_per_100": 0}, "source": "Aviso de pago 12/05/2026: US$20.312.500 on US$500.000.000"}
+}
