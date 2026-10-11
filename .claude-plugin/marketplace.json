@@ -12,6 +12,11 @@
       "name": "brevity",
       "source": "./plugins/brevity",
       "description": "Removes the verbosity everyone hates from your llm"
+    },
+    {
+      "name": "rueda",
+      "source": "./plugins/rueda",
+      "description": "Research skills for Argentine market instruments"
     }
   ]
 }
